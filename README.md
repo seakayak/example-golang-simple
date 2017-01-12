@@ -1,10 +1,21 @@
-### Seakayak Go example
+## Seakayak Go example
 
 This repository contains a simple Go web app that can be deployed to [seakayak.io](https://seakayak.io/).
 
-To build and deploy the app you will first need to [sign up for a seakayak account](https://seakayak.io/signup). You will also need a working [Docker client](https://docs.docker.com/engine/installation/mac/). Then run the following, replacing "USERNAME" with your seakayak username.
+### Prerequisites
+- A seakayak.io account ([sign up here](https://seakayak.io/signup))
+- A working Golang installation (see [instructions](https://golang.org/dl/))
+- A working Docker client (see instructions for [mac](https://docs.docker.com/engine/installation/mac/), [linux](https://docs.docker.com/engine/installation/linux/), [windows](https://docs.docker.com/engine/installation/windows/))
+
+### Quickstart
+
+In the following, replacing `USERNAME` with your seakayak username.
 
 ```shell
+# log into seakayak (one time only)
+docker login seakayak.io
+
+# clone the repository
 git clone github.com/seakayak/golang-example
 cd golang-example
 
@@ -18,4 +29,6 @@ docker build -t seakayak.io/USERNAME/golang-example .
 docker push seakayak.io/USERNAME/golang-example
 ```
 
-Now open https://golang-exampe.USERNAME.seakayak.io/ in your web browser.
+Your app is now live. To see it, go to https://golang-exampe.USERNAME.seakayak.io/.
+
+Next: explore the [documentation](https://seakayak.io/docs/).
