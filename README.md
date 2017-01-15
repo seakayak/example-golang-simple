@@ -16,19 +16,19 @@ In the following, replacing `USERNAME` with your seakayak username.
 docker login seakayak.io
 
 # clone the repository
-git clone github.com/seakayak/golang-example
+git clone github.com/seakayak/example-golang-uniqueips
 cd golang-example
 
 # must build for linux because it is going into a Docker container
 GOOS=linux go build -o linux-main *.go
 
 # build the docker image
-docker build -t seakayak.io/USERNAME/golang-example . 
+docker build -t seakayak.io/USERNAME/example-golang-uniqueips . 
 
 # deploy your app
-docker push seakayak.io/USERNAME/golang-example
+docker push seakayak.io/USERNAME/example-golang-uniqueips
 ```
 
-Your app is now live. To see it, go to https://golang-exampe.USERNAME.seakayak.io/.
+Your app is now live. To see it, go to https://example-golang-uniqueips.USERNAME.seakayak.io/.
 
 Next: explore the [documentation](https://seakayak.io/docs/).
